@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 
-void GenerateString(int n, char* str);
+void GenerateString(int n, char* str);  
 
 int main()
 {
