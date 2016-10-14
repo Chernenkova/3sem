@@ -10,6 +10,7 @@
 void* Multiplication(void* arg); 
 void Printing(int** data, int size); 
 
+
 int** A; 
 int** B; 
 int** C; 
