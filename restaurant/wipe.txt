@@ -1,0 +1,3 @@
+plate : 3
+knife : 2
+spoon : 1
