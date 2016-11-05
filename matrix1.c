@@ -4,11 +4,20 @@
 #include <stdlib.h> 
 #include <time.h> 
 
+/*
+ * У вас в коде делается неявное предположение, что MATRIX_SIZE делится на STREAM_NUMBER.
+ * В идеале его надо как-то обойти, либо явно это указать в комментарии. Лучше первое)
+ */
 #define STREAM_NUMBER 10
 #define MATRIX_SIZE 1000
 
-//���� ��� �������. ������ ������ �� ��������, �� ������ ������� ����� ������ �������
+/*
+ * Когда я выкачиваю код из репозитория, я получаю самую последнюю его версию.
+ */
 
+/*
+ * Лучше, чтобы в названии ф-й были глаголы: Multiply, Print.
+ */
 
 void* Multiplication(void* arg); 
 void Printing(int* data); 
@@ -35,8 +44,6 @@ int main()
 		} 
 	} 
 	
-	
-
 	pthread_t threadIDs[STREAM_NUMBER];  
 	unsigned int startTime = clock(); 
 	for(i = 0; i < STREAM_NUMBER; i++) 
@@ -48,7 +55,7 @@ int main()
 			exit(-1); 
 		} 
 	} 
-	
+
 	for(i = 0; i < STREAM_NUMBER; i++) 
 		pthread_join(threadIDs[i], (void**)NULL); 
 
@@ -63,7 +70,6 @@ int main()
 	free(A); 
 	free(B); 
 	free(C); 
-	
 
 	return 0; 
 } 
